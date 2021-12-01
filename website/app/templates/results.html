@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block title %}Voting Statistics{% endblock %}
+
+{% block custom_css %}
+   <link rel="stylesheet" href="static/css/results.css">
+   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+   <script src="static/script/results.js"></script>
+{% endblock %}
+
+{% block content %}
+
+<div class="load-screen">
+	<div class="dots-container">
+		<div class="dots"></div>
+		<div class="dots"></div>
+		<div class="dots"></div>
+		<div class="dots"></div>
+		<div class="dots"></div>
+	</div>
+    <p class="loading-caption">Loading the Live Poll Result...</p>
+</div>
+
+<div class="container whole">
+    
+	<h1>Voting Statistics</h1>
+
+    <div class="row">
+		  
+		<div class="col-11 mx-auto order-last order-lg-first col-lg-6  tab">
+			
+			<table class="table">
+
+                <thead class="mains">
+				   
+					<th class="d-none d-sm-table-cell">Sr.No.</th>
+					<th>Name</th>
+					<th>Party</th>
+					<th>Votes</th>
+
+				</thead>
+
+				<tbody id="table-body">
+
+					
+					
+				</tbody>
+
+            </table>
+
+		</div>	
+
+		<div class="col-10 mx-auto order-md-first order-lg-last col-lg-6 pie text-center">
+
+             <canvas id="pie-chart">
+
+             </canvas>
+
+		</div>     
+		
+	</div>
+	  
+</div>
+
+
+<script>
+
+	fetchResult()
+
+</script>
+
+
+{% endblock %}   

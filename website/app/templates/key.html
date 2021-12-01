@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Key{% endblock %}
+
+{% block custom_css %}
+<link rel="stylesheet" href="static/css/key.css">
+<!---fonts-->
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-11 mx-auto text-center">
+                <h2 class="vote">Your Voter ID</h2>
+                <p class="small">{{voter_id}}</p>
+                <h2 class="key">Your Private Key</h2>
+                <div class="table-responsive">
+                    <p class="small">{{key}}</p>
+                </div>
+                <hr>
+                <p>Your private key is solely your responsibility. 
+                    Please keep it safe and keep updating it regularly.</p>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
