@@ -383,6 +383,7 @@ def get_results() -> list:
 def check_mysql_connection(cursor):
     try:
         cursor.execute("select * from candidate_list where candidate_id=100001;")
+        # https://e-voting-blockchain-website.herokuapp.com/
     except Exception as e1:
         print("Reconnecting to database server...")
         print(str(e1))
